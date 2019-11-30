@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>简单的成绩管理系统</title>
+<style>
+	body{background-color:Turquoise;}
+	h1{color:SlateBlue;
+		position:relative;
+		left:500px;
+		top:25px;}
+		#e{position:relative;
+			left:500px;
+			top:150px;}
+	#f{
+		background-color:SkyBlue;
+		width:250px;
+		height:205px;
+		border-radius:25%;
+		position:relative;
+	     left:500px;
+	     top:200px;
+	    }
+</style>
+</head>
+<body>
+	<h1><b><font size="200">成绩查询系统</font></b></h1>
+<div id="e">
+学号：
+<input id="num">
+<button type="button" onclick="myFunction()">确认</button>
+</div>
+<div id="f"  align="center">
+<p>语文：</p>
+<p id="a"></p>
+<p>数学：</p>
+<p id="b"></p>
+<p>英语：</p>
+<p id="c"></p>
+</div>
+<script>
+function myFunction() 
+{
+	var score=[[123456,76,77,78],[234567,69,85,92],[34567863,51,93],[456789,89,84,81],[567890,100,86,84]]
+    var x,i,chinese,math,English;
+    x = document.getElementById("num").value;
+    if (x ==null||x==""|| x > 999999) 
+    {
+        alert("输入的学号不正确");
+    } 
+    else {
+     for(i=0;i<5;i++)
+     	{if(x==score[i][0])
+     	   {chinese=score[i][1]
+     	   	math=score[i][2]
+     	   	English=score[i][3]
+     	   }
+     	}
+    document.getElementById("a").innerHTML = chinese;
+    document.getElementById("b").innerHTML = math;
+    document.getElementById("c").innerHTML = English;
+    }
+    
+
+}
+</script>
+
+</body>
+</html>
