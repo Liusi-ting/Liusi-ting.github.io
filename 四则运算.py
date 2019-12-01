@@ -1,8 +1,8 @@
-#µ¼ÈërandomÄ£¿é
+#å¯¼å…¥randomæ¨¡å—
 import random
-#º¯Êı¹¦ÄÜ£ºÉú³ÉÌâÄ¿¼°´ğ°¸£¬·µ»Ø´ğ°¸
+#å‡½æ•°åŠŸèƒ½ï¼šç”Ÿæˆé¢˜ç›®åŠç­”æ¡ˆï¼Œè¿”å›ç­”æ¡ˆ
 def question():
- #µ÷ÓÃrandomÄ£¿éÖĞµÄrandintº¯ÊıËæ»úÉú³ÉÊı
+ #è°ƒç”¨randomæ¨¡å—ä¸­çš„randintå‡½æ•°éšæœºç”Ÿæˆæ•°
     a=random.randint(1,10)
     b=random.randint(1,10)
     c=random.randint(1,4)
@@ -20,19 +20,19 @@ def question():
         ans=a-b
     return ans
 ans=question()
-#Ñ§ÉúÊäÈë´ğ°¸s_ans,ÓÃintº¯Êı½«ÊäÈëµÄ´ğ°¸×ª»¯ÎªÕûÊıĞÍ
+#å­¦ç”Ÿè¾“å…¥ç­”æ¡ˆs_ans,ç”¨intå‡½æ•°å°†è¾“å…¥çš„ç­”æ¡ˆè½¬åŒ–ä¸ºæ•´æ•°å‹
 s_ans=int(input())
-#kÓÃÀ´¼ÇÂ¼´íÎó´ÎÊı£¬flag±ê¼ÇÊÇÒòÎª´íÎó´ÎÊı¶àÁË½øÈëÏÂÒ»Ìâ»¹ÊÇ»Ø´ğÕıÈ·½øÈëÏÂÒ»Ìâ
+#kç”¨æ¥è®°å½•é”™è¯¯æ¬¡æ•°ï¼Œflagæ ‡è®°æ˜¯å› ä¸ºé”™è¯¯æ¬¡æ•°å¤šäº†è¿›å…¥ä¸‹ä¸€é¢˜è¿˜æ˜¯å›ç­”æ­£ç¡®è¿›å…¥ä¸‹ä¸€é¢˜
 k=0
 flag=1
 while(s_ans!=ans):
   if(k!=2):
-    print('wrong,please try again')
+    print "wrong,please try again"
     k=k+1
     s_ans=int(input())
   else:
-    print('wrong!you have tried three times!test over')
+    print "wrong!you have tried three times!test over"
     flag=0
     break
 if flag:
-    print('right')
+    print "right"
